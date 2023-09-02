@@ -177,3 +177,142 @@ SELECT
 END;
 
 go
+    -- Mine 
+INSERT INTO
+    Courses (CourseId, CourseName)
+VALUES
+    ('C1', 'English'),
+    ('C2', 'Cyber Security'),
+    ('C3', 'AI and Machine Learning'),
+    ('C4', 'Data Structures and Algo'),
+    ('C5', 'Operating Systems'),
+    ('C6', 'Cold Fusion'),
+    ('C7', 'Mathematics');
+
+INSERT INTO
+    StudentInfo(StudentID, CourseId)
+VALUES
+    ('S1', 'C1'),
+    ('S2', 'C1'),
+    ('S3', 'C3'),
+    ('S4', 'C4'),
+    ('S5', 'C6'),
+    ('S6', 'C3');
+
+INSERT INTO
+    StudentInfo(StudentID, CourseId)
+VALUES
+    ('S1', 'C4');
+
+INSERT INTO
+    TeacherInfo(TeacherID, CourseId)
+VALUES
+    ('T1', 'C1'),
+    ('T2', 'C4'),
+    ('T2', 'C3'),
+    ('T3', 'C6'),
+    ('T4', 'C5'),
+    ('T4', 'C4'),
+    ('T5', 'C2');
+
+INSERT INTO
+    StudentDetail(
+        StudentID,
+        StudentName,
+        StudentEmail,
+        GuardianEmail,
+        StudentPhoneNumber
+    )
+VALUES
+    (
+        'S1',
+        'Mary Christ',
+        'marychrist@gmail.com',
+        'guardianMarry@gmail.com',
+        '8955302231'
+    ),
+    (
+        'S2',
+        'Kanika Mishra',
+        'kanikamishra@gmail.com',
+        'guardiankanikamishra@gmail.com',
+        '94205242345'
+    ),
+    (
+        'S3',
+        'Kanika Gandhi',
+        'kanikagandhi@gmail.com',
+        'guardiankanikagandhi@gmail.com',
+        '9484960320'
+    ),
+    (
+        'S4',
+        'Mary Oberoi',
+        'marryoberoi@gmail.com',
+        'guardianmarry@gmail.com',
+        '9460515164'
+    ),
+    (
+        'S5',
+        'Krish Gupta',
+        'krishgupta@gmail.com',
+        'guardiankrish@gmail.com',
+        '9003234012'
+    ),
+    (
+        'S6',
+        'Chitresh Malik',
+        'chitreshmalik@gmail.com',
+        'guardianchitresh@gmail.com',
+        '9660328111'
+    );
+
+INSERT INTO
+    TeacherDetail (TeacherID, TeacherName, Email, PhoneNumber)
+VALUES
+    (
+        'T1',
+        'Ashley',
+        'ashley@gmail.com',
+        '123-456-7890'
+    ),
+    (
+        'T2',
+        'Abhay',
+        'abhavy@gmail.com',
+        '987-654-3210'
+    ),
+    (
+        'T3',
+        'Dinesh',
+        'dinesh@gmail.com',
+        '987-654-3210'
+    ),
+    (
+        'T4',
+        'Rajeev',
+        'rajeev@gmail.com',
+        '987-654-3210'
+    ),
+    (
+        'T5',
+        'Tanushree',
+        'tanushree@gmail.com',
+        '555-123-4567'
+    );
+
+INSERT INTO
+    AdminDetail (AdminID, AdminName, Email, PhoneNumber)
+VALUES
+    ('A2', 'Manan', 'manan@gmail.com', '9466124321');
+
+go
+    EXEC GetStudentEnrollDetail @studentId = 'S1';
+
+EXEC GetTeacherTeachingCourses @teacherId = 'T1';
+
+Exec GetCourseTeachers @courseName = 'Data Structures and Algo';
+
+Exec GetCourseTeachersEmails @courseName = 'Data Structures and Algo' EXEC GetStudentEnrollCourses @studentId = 'S1';
+
+Exec GetTeacherTeachingCourses @teacherID = 'T1' Exec GetCourseTeachers
