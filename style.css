@@ -1,0 +1,41 @@
+.form {
+  max-width: 300px;
+  min-height: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.personal-data-container p {
+  font-size: 16px;
+}
+.navigation-link {
+  color: blue;
+  transition: color 0.3s;
+}
+
+.navigation-link:hover {
+  color: grey;
+}
+.main-heading {
+  margin-left: 35%;
+  text-decoration: none;
+}
+.navigation-bar-buttons {
+  margin-right: 2%;
+}
+.personal-data-container {
+  min-width: 400px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+.enrolled-courses {
+  margin-top: 15px;
+}
+
+.enrolled-courses strong {
+  display: block;
+  margin-bottom: 5px;
+}
